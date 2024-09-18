@@ -1,0 +1,12 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:Your Full Name
+N:Last Name;First Name;;;
+ORG:Your Organization
+TITLE:Your Job Title
+TEL;TYPE=WORK,VOICE:(111) 555-1212
+TEL;TYPE=HOME,VOICE:(123) 456-7890
+ADR;TYPE=WORK:;;123 Work Street;City;State;12345;Country
+EMAIL:your.email@example.com
+URL:https://www.yourwebsite.com
+END:VCARD
