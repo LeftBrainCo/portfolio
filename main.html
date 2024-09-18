@@ -3,10 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Basic Site</title>
+  <meta name="description" content="Louis McKernan's Portfolio">
+  <title>Louis McKernan - Portfolio</title>
+  <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-  <h1>Welcome to My Website</h1>
-  <p>This is a very basic website hosted on GitHub Pages.</p>
+  <header>
+    <div class="header-container">
+      <h1>Louis McKernan - Portfolio</h1>
+      <img src="img/MyFace.jpg" alt="Louis McKernan" class="profile-picture">
+    </div>
+    <div class="theme-toggle">
+      <!-- Sun Icon -->
+      <img id="sun-icon" src="img/icon-sun.svg" alt="Sun Icon" width="24" height="24">
+    
+      <label class="switch">
+        <input type="checkbox" id="toggleTheme">
+        <span class="slider"></span>
+      </label>
+      
+      <!-- Moon Icon -->
+      <img id="moon-icon" src="img/icon-moon.svg" alt="Moon Icon" width="24" height="24">
+    </div>
+  </header>
+
+  <nav class="navigation">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- Content sections go here -->
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Louis McKernan</p>
+  </footer>
+
+  <script src="scripts/scripts.js"></script>
 </body>
 </html>

@@ -1,0 +1,156 @@
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: var(--background);
+  color: var(--text);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+:root {
+  --background: #ffffff;
+  --text: #000000;
+  --header-bg: #f0f0f0;
+  --nav-bg: #ddd;
+}
+
+[data-theme="dark"] {
+  --background: #121212;
+  --text: #ffffff;
+  --header-bg: #1a1a1a;
+  --nav-bg: #333;
+}
+
+.header-container {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--header-bg);
+}
+
+.profile-picture {
+  width: 150px;
+  border-radius: 50%;
+  margin-top: 10px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  background-color: var(--nav-bg);
+}
+
+.navigation ul {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: var(--text);
+  padding: 10px;
+}
+
+/* Theme Toggle */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Align toggle to the right */
+  gap: 10px;
+  padding: 10px;
+}
+
+/* Toggle Switch Styles */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3; /* Blue when active */
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Optional: Add hover effect */
+.slider:hover {
+  background-color: #b3b3b3;
+}
+
+/* Icon Opacity and Filter for Dark/Light Mode */
+
+/* Sun Icon */
+#sun-icon {
+  opacity: 1;
+  filter: none; /* Normal in light mode */
+  transition: filter 0.3s ease, opacity 0.3s ease; /* Ensure smooth transition */
+}
+
+/* Moon Icon */
+#moon-icon {
+  opacity: 0.5;
+  filter: brightness(0); /* Darken the moon icon in light mode */
+  transition: filter 0.3s ease, opacity 0.3s ease; /* Ensure smooth transition */
+}
+
+/* When dark mode is active, invert and brighten icons */
+[data-theme="dark"] #sun-icon,
+[data-theme="dark"] #moon-icon {
+  filter: invert(1) brightness(1.0); /* Invert and slightly brighten the icons */
+}
+
+/* When dark mode is active, adjust opacity */
+[data-theme="dark"] #moon-icon {
+  opacity: 1; /* Bright moon icon in dark mode */
+}
+
+[data-theme="dark"] #sun-icon {
+  opacity: 0.5; /* Dim sun icon in dark mode */
+}
+
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--header-bg);
+}
